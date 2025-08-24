@@ -1,11 +1,9 @@
-#include <cassert>
-#include "../src/StringCalculator.h"
+#include "StringCalculator.h"
+#include <string>
 
-int main() {
-    StringCalculator calc;
-
-    // Smallest failing test
-    assert(calc.add("") == 0);
-
-    return 0;
+int StringCalculator::add(const std::string& numbers) {
+    if (numbers.empty()) {
+        return 0;   // ✅ minimum code to pass first test
+    }
+    return std::stoi(numbers);  // temporary stub for next test
 }
