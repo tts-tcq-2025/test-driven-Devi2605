@@ -1,8 +1,11 @@
-#define CATCH_CONFIG_MAIN
-#include "catch.hpp"
+#include <cassert>
 #include "../src/StringCalculator.h"
 
-TEST_CASE("Empty string returns 0") {
+int main() {
     StringCalculator calc;
-    REQUIRE(calc.add("") == 0);
+
+    // Smallest failing test
+    assert(calc.add("") == 0);
+
+    return 0;
 }
