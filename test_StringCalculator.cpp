@@ -1,9 +1,7 @@
-#include "StringCalculator.h"
-#include <string>
+#include "gtest/gtest.h"
+#include "StringCalculator.hpp"
 
-int StringCalculator::add(const std::string& numbers) {
-    if (numbers.empty()) {
-        return 0;   // ✅ minimum code to pass first test
-    }
-    return std::stoi(numbers);  // temporary stub for next test
+TEST(StringCalculatorTest, empty_string_should_return_Zero) {
+    StringCalculator calc;
+    EXPECT_EQ(calc.Add(""), 0);
 }
