@@ -17,7 +17,7 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 # --- Library sources ---
-add_library(string_calculator
+add_library(String_Calculator
     src/StringCalculator.cpp
     src/StringCalculator.h
 )
@@ -25,16 +25,17 @@ add_library(string_calculator
 target_include_directories(string_calculator PUBLIC src)
 
 # --- Test sources ---
-add_executable(test_string_calculator
-    tests/test_string_calculator.cpp
+add_executable(test_String_Calculator
+    tests/test_String_Calculator.cpp
 )
 
 target_link_libraries(
-    test_string_calculator
+    test_String_Calculator
     PRIVATE string_calculator
     PRIVATE GTest::gtest_main
 )
 
 # --- Test discovery ---
 include(GoogleTest)
-gtest_discover_tests(test_string_calculator)
+gtest_discover_tests(test_String_Calculator)
+
